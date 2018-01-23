@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animal Matching Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-image: linear-gradient(to bottom,#006622,#009933,#00e64d);
+            font-family: "Orbitron", "sans-serif";
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+        .card {
+            border: 1px solid darkgrey;
+            border-radius: 3px;
+            max-height: 120px;
+            display: none;
+        }
+        .cardback {
+            max-height: 120px;
+        }
+        .logo {
+            float: left;
+            max-height: 60px;
+        }
+        .navbar {
+            opacity: 0.8;
+        }
+        .navbar-brand {
+            padding-top: 25px;
+            font-size: 3rem;
+        }
+        .navbar-header {
+            text-align: center;
+        }
+        .nav-middle {
+            font-size: 1.5em;
+            padding: 20px 25px 0px 25px; 
+            text-align: center;
+        }
+        .navbar-right {
+            text-align: center;
+        }
+        .no-js #loader { 
+            display: none;
+        }
+        .js #loader { 
+            display: block;
+            position: absolute;
+            left: 100px; top: 0; }
+        #reset {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+        .se-pre-con {
+        	position: fixed;
+        	left: 0px;
+        	top: 0px;
+        	width: 100%;
+        	height: 100%;
+        	z-index: 9999;
+        	background: url(img/spinner.gif) center no-repeat #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="se-pre-con"></div>
+    <nav class="navbar navbar-default navbar-fixed-top">		
+		<div class='container'>
+		    <div class="navbar-header">
+		    	<img class="logo" src="img/logo.png" />
+		    	<div class="navbar-brand">MEMORY GAME</div>
+		    </div>	  
+		    <div class="nav navbar-nav navbar-left nav-middle">
+		        <p>Matches: <span id="score">0</span></p>
+		    </div>
+		    <div class="nav navbar-nav navbar-right">
+		        <button id="reset" onclick="refreshGame()">Reset Game</button>
+		    </div>
+		</div>
+	</nav>
+    <div class="container" id="gamecontainer">
+        
+    </div>
+    
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
